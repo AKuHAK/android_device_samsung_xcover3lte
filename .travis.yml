@@ -20,8 +20,7 @@ script:
 - source ./build/envsetup.sh
 - lunch omni_xcover3lte-eng
 #- make -j4 bootimage
-- make -j4 recoveryimage &> log
-- lunch
+- make -j2 recoveryimage
 # - mkazip_delos3geur
 # - cd out/target/product/delos3geur/
 # - tar -H ustar -c "recovery.img" > "recovery.tar"
