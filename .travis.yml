@@ -17,9 +17,11 @@ script:
 - git clone https://github.com/akuhak/android_device_samsung_xcover3lte device/samsung/xcover3lte
 - rm -rf bootable/recovery
 - git clone https://github.com/omnirom/android_bootable_recovery bootable/recovery
-- source build/envsetup.sh ; lunch omni_xcover3lte-eng
-- make -j4 bootimage
-# - make -j4 recoveryimage &> log
+- source ./build/envsetup.sh
+- lunch omni_xcover3lte-eng
+#- make -j4 bootimage
+- make -j4 recoveryimage &> log
+- lunch
 # - mkazip_delos3geur
 # - cd out/target/product/delos3geur/
 # - tar -H ustar -c "recovery.img" > "recovery.tar"
