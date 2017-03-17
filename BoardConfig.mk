@@ -43,7 +43,7 @@ TARGET_KERNEL_CONFIG := pxa1908_xcover3lte_eur_defconfig
 # Fallback if unable to build from soruce
 TARGET_PREBUILT_KERNEL := device/samsung/xcover3lte/kernel
 TARGET_KERNEL_ARCH := arm64
-TARGET_KERNEL_CROSS_COMPILE_PREFIX := aarch64-linux-android-
+# TARGET_KERNEL_CROSS_COMPILE_PREFIX := aarch64-linux-android-
 BOARD_CUSTOM_BOOTIMG_MK := device/samsung/xcover3lte/custom_mkbootimg.mk
 BOARD_CUSTOM_MKBOOTIMG := device/samsung/xcover3lte/tools/pxa1088-mkbootimg
 TARGET_CUSTOM_DTBTOOL := device/samsung/xcover3lte/tools/pxa1088-dtbtool
