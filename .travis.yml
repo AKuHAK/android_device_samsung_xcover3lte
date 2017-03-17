@@ -10,6 +10,12 @@ install:
 before_script:
 - wget https://github.com/TwrpBuilder/twrp-5.1.1-source/releases/download/initial/twrp-5.1.1.tar.xz -O twrp.tar.xz
 - tar -xvf twrp.tar.xz &> log
+# we need toolchain for ccompiling kernel
+- git clone https://github.com/aapav01/aarch64-linux-android-4.9-linaro
+- export CROSS_COMPILE=$PWD/aarch64-linux-android-4.9-linaro/bin/aarch64-linux-android-
+- export ARCH=arm64
+- export PATH=$PATH:$PWD/aarch64-linux-android-4.9-linaro/bin/
+- aarch64-linux-android-gcc --version
 
 script:
 - cd twrp
