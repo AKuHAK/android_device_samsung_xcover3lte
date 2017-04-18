@@ -82,7 +82,7 @@ MRVL_ION := true
 # Inline kernel building
 TARGET_KERNEL_SOURCE := kernel/samsung/xcover3lte
 TARGET_KERNEL_CONFIG := pxa1908_xcover3lte_eur_defconfig
-TARGET_PREBUILT_INT_KERNEL_TYPE := Image
+#TARGET_PREBUILT_INT_KERNEL_TYPE := Image
 #TARGET_PREBUILT_KERNEL := device/samsung/xcover3lte/kernel
 TARGET_KERNEL_ARCH := arm64
 TARGET_KERNEL_HEADER_ARCH := arm64
@@ -100,6 +100,7 @@ BOARD_KERNEL_BASE := 0x10000000
 BOARD_KERNEL_PAGESIZE := 2048
 BOARD_KERNEL_SEPARATED_DT := true
 BOARD_KERNEL_PREBUILT_DT := true
+BOARD_KERNEL_IMAGE_NAME := Image.gz
 TARGET_PREBUILT_DT := device/samsung/xcover3lte/dt.img
 BOARD_DTBTOOL_ARGS :=
 BOARD_MKBOOTIMG_ARGS := --signature device/samsung/xcover3lte/boot.img-signature --unknown 0x3000000
