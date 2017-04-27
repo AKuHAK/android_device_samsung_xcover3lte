@@ -1,19 +1,19 @@
 [
 	{
 		"remote":		"github",
-		"repository":	"android_kernel_samsung_xcover3lte",
+		"repository":	"akuhak/android_kernel_samsung_xcover3lte",
 		"target_path":	"kernel/samsung/xcover3lte",
 		"revision":		"master"
 	},
 	{
 		"remote":		"github",
-		"repository":	"android_device_samsung_xcover3lte",
+		"repository":	"akuhak/android_device_samsung_xcover3lte",
 		"target_path":	"device/samsung/xcover3lte",
 		"revision":		"master"
 	},
 	{
 		"remote":		"github",
-		"repository":	"android_vendor_samsung_xcover3lte",
+		"repository":	"Matt07211/android_vendor_samsung_xcover3lte",
 		"target_path":	"vendor/samsung/xcover3lte",
 		"revision":		"master"
 	}
