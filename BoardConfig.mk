@@ -82,7 +82,6 @@ MRVL_ION := true
 # Inline kernel building
 TARGET_KERNEL_SOURCE := kernel/samsung/xcover3lte
 TARGET_KERNEL_CONFIG := pxa1908_xcover3lte_eur_defconfig
-#TARGET_PREBUILT_INT_KERNEL_TYPE := Image
 #TARGET_PREBUILT_KERNEL := device/samsung/xcover3lte/kernel
 TARGET_KERNEL_ARCH := arm64
 TARGET_KERNEL_HEADER_ARCH := arm64
