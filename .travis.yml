@@ -2,11 +2,8 @@ language: java
 jdk:
 - openjdk7
 sudo: required
-cache: ccache
-before_install:
-- export PATH="/usr/lib/ccache:${PATH}"
 install:
-- sudo apt-get install -qyy lzop git-core gnupg flex bison gperf build-essential zip zlib1g-dev gcc-multilib g++-multilib libc6-dev-i386 lib32ncurses5-dev x11proto-core-dev libx11-dev lib32z-dev ccache libgl1-mesa-dev libxml2-utils xsltproc unzip maven schedtool
+- sudo apt-get install -qyy lzop git-core gnupg flex bison gperf build-essential zip zlib1g-dev gcc-multilib g++-multilib libc6-dev-i386 lib32ncurses5-dev x11proto-core-dev libx11-dev lib32z-dev libgl1-mesa-dev libxml2-utils xsltproc unzip maven schedtool
 before_script:
 - git config --global user.email "you@example.com"
 - git config --global user.name "Your Name"
@@ -15,11 +12,6 @@ before_script:
 - curl http://commondatastorage.googleapis.com/git-repo-downloads/repo > ~/bin/repo
 - chmod a+x ~/bin/repo
 - export PATH=~/bin:$PATH
-- mkdir ~/twrp
-- cd ~/twrp
-- repo init --depth=1 -u git://github.com/minimal-manifest-twrp/platform_manifest_twrp_omni.git -b twrp-6.0
-- repo sync -j2
-
 # we need toolchain for compiling kernel
 - cd $HOME
 - git clone https://github.com/aapav01/aarch64-linux-android-4.9-linaro --depth=1
@@ -27,6 +19,11 @@ before_script:
 - export ARCH=arm64
 - export PATH=$PATH:$PWD/aarch64-linux-android-4.9-linaro/bin/
 - aarch64-linux-android-gcc --version
+
+- mkdir ~/twrp
+- cd ~/twrp
+- repo init --depth=1 -u https://github.com/minimal-manifest-twrp/platform_manifest_twrp_omni.git -b twrp-6.0
+- repo sync -j2
 
 script:
 - cd ~/twrp
@@ -37,7 +34,7 @@ script:
 - source ./build/envsetup.sh
 - lunch omni_xcover3lte-eng
 #- make -j4 bootimage
-- mka recoveryimage
+- make recoveryimage
 # - mkazip_delos3geur
 # - cd out/target/product/delos3geur/
 # - tar -H ustar -c "recovery.img" > "recovery.tar"
