@@ -1,9 +1,9 @@
 $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 
 # The gps config appropriate for this device
-$(call inherit-product, device/common/gps/gps_us_supl.mk)
+# $(call inherit-product, device/common/gps/gps_us_supl.mk)
 
-$(call inherit-product-if-exists, vendor/samsung/xcover3lte/xcover3lte-vendor.mk)
+# $(call inherit-product-if-exists, vendor/samsung/xcover3lte/xcover3lte-vendor.mk)
 
 # Overlay
 DEVICE_PACKAGE_OVERLAYS += device/samsung/xcover3lte/overlay
@@ -24,7 +24,7 @@ else
 endif
 
 PRODUCT_COPY_FILES += \
-    $(LOCAL_KERNEL):kernel
+#    $(LOCAL_KERNEL):kernel
     $(LOCAL_PATH)/dt.img:dt.img
 
 # Key mappings and touchscreen files
@@ -147,5 +147,5 @@ PRODUCT_PACKAGES += \
 $(call inherit-product, build/target/product/full.mk)
 
 # Get Proprietary Libraries and binaries
-$(call inherit-product, vendor/samsung/xcover3lte/xcover3lte-vendor.mk)
+# $(call inherit-product, vendor/samsung/xcover3lte/xcover3lte-vendor.mk)
 
