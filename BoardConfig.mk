@@ -13,11 +13,6 @@ TARGET_SOC := pxa1908
 -include vendor/samsung/xcover3lte/BoardConfigVendor.mk
 
 # Architecture/Bootloader
-#TARGET_ARCH := arm
-#TARGET_ARCH_VARIANT := armv7-a-neon
-#TARGET_CPU_VARIANT := cortex-a7
-#TARGET_CPU_ABI := armeabi-v7a
-#TARGET_CPU_ABI2 := armeabi
 TARGET_ARCH := arm64
 TARGET_ARCH_VARIANT := armv8-a
 TARGET_CPU_VARIANT := cortex-a53
@@ -26,7 +21,7 @@ TARGET_CPU_ABI2 :=
 
 TARGET_2ND_ARCH := arm
 TARGET_2ND_ARCH_VARIANT := armv7-a-neon
-TARGET_2ND_CPU_VARIANT := cortex-a53.a57
+TARGET_2ND_CPU_VARIANT := cortex-a53
 TARGET_2ND_CPU_ABI := armeabi-v7a
 TARGET_2ND_CPU_ABI2 := armeabi
 
