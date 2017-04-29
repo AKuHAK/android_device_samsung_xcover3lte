@@ -13,7 +13,7 @@ PRODUCT_PACKAGES += libGLES_android
 
 # Boot Animation
 TARGET_SCREEN_HEIGHT := 800
-TARGET_SCREEN_WIDTH :=	400
+TARGET_SCREEN_WIDTH :=	480
 
 LOCAL_PATH := device/samsung/xcover3lte
 
