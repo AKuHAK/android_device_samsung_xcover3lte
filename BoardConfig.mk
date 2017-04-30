@@ -108,7 +108,7 @@ BOARD_KERNEL_PREBUILT_DT := true
 BOARD_KERNEL_IMAGE_NAME := Image.gz
 TARGET_PREBUILT_DT := device/samsung/xcover3lte/dt.img
 BOARD_DTBTOOL_ARGS :=
-BOARD_MKBOOTIMG_ARGS := --signature device/samsung/xcover3lte/boot.img-signature --unknown 0x3000000 -d device/samsung/xcover3lte/dt.img
+BOARD_MKBOOTIMG_ARGS := --signature device/samsung/xcover3lte/boot.img-signature --unknown 0x3000000 # -dt device/samsung/xcover3lte/dt.img
 BOARD_UBOOT_ARGS := -A arm64 -O linux -T kernel -C gzip -a 01000000 -e 01000000 -n "pxa1928dkb linux"
 
 
