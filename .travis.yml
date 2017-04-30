@@ -15,9 +15,9 @@ before_script:
 # we need toolchain for compiling kernel
 - cd $HOME
 - git clone https://github.com/aapav01/aarch64-linux-android-4.9-linaro --depth=1
-- export CROSS_COMPILE=~/aarch64-linux-android-4.9-linaro/bin/aarch64-linux-android-
-# - export ARCH=arm64
-- export PATH=$PATH:~/aarch64-linux-android-4.9-linaro/bin/
+- export CROSS_COMPILE=$HOME/aarch64-linux-android-4.9-linaro/bin/aarch64-linux-android-
+- export ARCH=arm64
+- export PATH=$PATH:$HOME/aarch64-linux-android-4.9-linaro/bin/
 - aarch64-linux-android-gcc --version
 
 - mkdir ~/twrp
@@ -36,8 +36,8 @@ script:
 #- make -j4 bootimage
 - make recoveryimage
 # - mkazip_delos3geur
- - cd out/target/product/xcover3lte/
- - tar -H ustar -c "recovery.img" > "recovery.tar"
+# - cd out/target/product/xcover3lte/
+# - tar -H ustar -c "recovery.img" > "recovery.tar"
 
 # deploy:
   # skip_cleanup: true
