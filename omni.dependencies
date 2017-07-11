@@ -16,5 +16,17 @@
 		"repository":	"Matt07211/android_vendor_samsung_xcover3lte",
 		"target_path":	"vendor/samsung/xcover3lte",
 		"revision":		"master"
+	},
+	{
+		"remote":		"github",
+		"repository":	"Matt07211/android_hardware_marvell",
+		"target_path":	"hardware/marvell",
+		"revision":		"master"
+	},
+	{
+		"remote":		"github",
+		"repository":	"AKuHAK/pxa-mkbootimg",
+		"target_path":	"device/samsung/xcover3lte/tools/",
+		"revision":		"master"
 	}
 ]

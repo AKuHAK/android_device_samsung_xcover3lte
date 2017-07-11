@@ -15,13 +15,13 @@ TARGET_SOC := pxa1908
 # Architecture/Bootloader
 TARGET_ARCH := arm64
 TARGET_ARCH_VARIANT := armv8-a
-TARGET_CPU_VARIANT := cortex-a53
+TARGET_CPU_VARIANT := generic
 TARGET_CPU_ABI := arm64-v8a
 TARGET_CPU_ABI2 :=
 
 TARGET_2ND_ARCH := arm
 TARGET_2ND_ARCH_VARIANT := armv7-a-neon
-TARGET_2ND_CPU_VARIANT := cortex-a53
+TARGET_2ND_CPU_VARIANT := generic
 TARGET_2ND_CPU_ABI := armeabi-v7a
 TARGET_2ND_CPU_ABI2 := armeabi
 
@@ -57,7 +57,7 @@ BOARD_CHARGER_SHOW_PERCENYAGE := true
 BOARD_CHARGING_MODE_BOOTING_LPM := true
 
 # Crypto
-TARGET_HW_DISK_ENCRYPTION := false
+TARGET_HW_DISK_ENCRYPTION := true
 
 # Debug flags
 TWRP_INCLUDE_LOGCAT := true
@@ -92,14 +92,15 @@ TARGET_KERNEL_CONFIG := pxa1908_xcover3lte_eur_defconfig
 TARGET_KERNEL_ARCH := arm64
 TARGET_KERNEL_HEADER_ARCH := arm64
 TARGET_KERNEL_CROSS_COMPILE_PREFIX := aarch64-linux-android-
+KERNEL_TOOLCHAIN := prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-4.8/bin/
 
 # Init
 TARGET_PROVIDES_INIT_TARGET_RC := true
 
 # Kernel
 BOARD_CUSTOM_BOOTIMG_MK := device/samsung/xcover3lte/custom_mkbootimg.mk
-BOARD_CUSTOM_MKBOOTIMG := device/samsung/xcover3lte/tools/pxa1088-mkbootimg
-TARGET_CUSTOM_DTBTOOL := device/samsung/xcover3lte/tools/pxa1088-dtbtool
+BOARD_CUSTOM_MKBOOTIMG := device/samsung/xcover3lte/tools/pxa-mkbootimg
+TARGET_CUSTOM_DTBTOOL := device/samsung/xcover3lte/tools/pxa1908-dtbtool
 BOARD_KERNEL_CMDLINE := 
 BOARD_KERNEL_BASE := 0x10000000
 BOARD_KERNEL_PAGESIZE := 2048

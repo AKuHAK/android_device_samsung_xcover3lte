@@ -12,23 +12,24 @@ before_script:
 - curl http://commondatastorage.googleapis.com/git-repo-downloads/repo > ~/bin/repo
 - chmod a+x ~/bin/repo
 - export PATH=~/bin:$PATH
-# we need toolchain for compiling kernel
+# skip custom toolchain
 - cd $HOME
-- git clone https://github.com/aapav01/aarch64-linux-android-4.9-linaro --depth=1
-- export CROSS_COMPILE=$HOME/aarch64-linux-android-4.9-linaro/bin/aarch64-linux-android-
+- git clone https://android.googlesource.com/platform/prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-4.8 /opt/toolchains/aarch64-linux-android-4.8 --depth=1
+- export CROSS_COMPILE=/opt/toolchains/aarch64-linux-android-4.8/bin/aarch64-linux-android-
 - export ARCH=arm64
-- export PATH=$PATH:$HOME/aarch64-linux-android-4.9-linaro/bin/
+- export PATH=$PATH:/opt/toolchains/aarch64-linux-android-4.8/bin/
 - aarch64-linux-android-gcc --version
-
 - mkdir ~/twrp
 - cd ~/twrp
-- repo init --depth=1 -u https://github.com/minimal-manifest-twrp/platform_manifest_twrp_omni.git -b twrp-6.0
+- repo init --depth=1 -u https://github.com/minimal-manifest-twrp/platform_manifest_twrp_omni.git -b twrp-5.1
 - repo sync -j2
 
 script:
 - cd ~/twrp
+- git clone https://android.googlesource.com/device/common device/common  --depth=1
 - git clone https://github.com/akuhak/xcover3ltexx_custom_kernel kernel/samsung/xcover3lte --depth=1
 - git clone https://github.com/akuhak/android_device_samsung_xcover3lte --depth=1 --branch test2 --single-branch device/samsung/xcover3lte
+# we need newest twrp
 - rm -rf bootable/recovery
 - git clone https://github.com/omnirom/android_bootable_recovery bootable/recovery --depth=1
 - source ./build/envsetup.sh
