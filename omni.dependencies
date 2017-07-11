@@ -7,12 +7,6 @@
 	},
 	{
 		"remote":		"github",
-		"repository":	"akuhak/android_device_samsung_xcover3lte",
-		"target_path":	"device/samsung/xcover3lte",
-		"revision":		"test2"
-	},
-	{
-		"remote":		"github",
 		"repository":	"Matt07211/android_vendor_samsung_xcover3lte",
 		"target_path":	"vendor/samsung/xcover3lte",
 		"revision":		"master"

@@ -29,7 +29,7 @@ script:
 - git clone https://android.googlesource.com/device/common device/common  --depth=1
 # This line are in omni.dependencies
 #- git clone https://github.com/akuhak/xcover3ltexx_custom_kernel kernel/samsung/xcover3lte --depth=1
-#- git clone https://github.com/akuhak/android_device_samsung_xcover3lte --depth=1 --branch test2 --single-branch device/samsung/xcover3lte
+- git clone https://github.com/akuhak/android_device_samsung_xcover3lte --depth=1 --branch test2 --single-branch device/samsung/xcover3lte
 # we need newest twrp
 - rm -rf bootable/recovery
 - git clone https://github.com/omnirom/android_bootable_recovery bootable/recovery --depth=1
