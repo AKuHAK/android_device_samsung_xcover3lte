@@ -36,7 +36,7 @@ script:
 - source ./build/envsetup.sh
 - lunch omni_xcover3lte-eng
 #- make -j4 bootimage
-- make recoveryimage
+- make recoveryimage --silent
 # - mkazip_delos3geur
 # - cd out/target/product/xcover3lte/
 # - tar -H ustar -c "recovery.img" > "recovery.tar"
